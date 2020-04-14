@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sarvoday_warr_room`
+-- Database: `crm_db`
 --
 
 -- --------------------------------------------------------
@@ -43,10 +43,7 @@ CREATE TABLE `branches` (
 --
 
 INSERT INTO `branches` (`id`, `name`, `city_id`, `covercity_id`, `main`, `created_at`, `updated_at`) VALUES
-(1, 'HQ', 155, '155', 0, '2018-01-29 20:37:06', '2018-01-29 20:37:06'),
-(2, 'Metro', 92, '92, 108, 104, 4', 0, '2018-02-21 06:44:00', '2018-12-15 15:23:59'),
-(3, 'Metro', 272, '272, 86, 117', 0, '2018-02-26 17:52:20', '2018-02-26 17:52:20'),
-(4, 'Metro', 40, '2', 0, '2018-03-05 22:39:34', '2018-03-05 22:39:34');
+(1, 'HQ', 155, '155', 0, '2018-01-29 20:37:06', '2018-01-29 20:37:06');
 
 -- --------------------------------------------------------
 
@@ -92,9 +89,7 @@ CREATE TABLE `campaigntypes` (
 --
 
 INSERT INTO `campaigntypes` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(2, 'SMS', NULL, NULL),
-(3, 'General', NULL, NULL),
-(4, 'Facebook', NULL, NULL);
+(1, 'General', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -423,7 +418,7 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `name`, `email`, `phone`, `phone_2`, `phone_home`, `phone_office`, `dob`, `address`, `nic`, `created_at`, `updated_at`) VALUES
-(12, 'Dulaj', 'rashansamith88@gmail.com', '0779018898', NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-09 15:34:11', '2019-01-09 15:34:11');
+(12, 'Dulaj', 'user@gmail.com', '0777777777', NULL, NULL, NULL, NULL, NULL, NULL, '2019-01-09 15:34:11', '2019-01-09 15:34:11');
 
 -- --------------------------------------------------------
 
@@ -491,178 +486,7 @@ CREATE TABLE `eventlogs` (
 --
 
 INSERT INTO `eventlogs` (`id`, `user_id`, `event`, `functionname`, `content`, `iserror`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Create user', 'create', 'Start', 0, '2019-01-09 15:12:10', '2019-01-09 15:12:10'),
-(2, 1, 'Create user', 'create', 'Start', 0, '2019-01-09 15:13:27', '2019-01-09 15:13:27'),
-(3, 1, 'Create user', 'create', 'Start', 0, '2019-01-09 15:15:56', '2019-01-09 15:15:56'),
-(4, 69, 'Get branches', 'edit', 'Start', 0, '2019-01-09 15:21:15', '2019-01-09 15:21:15'),
-(5, 69, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 15:30:48', '2019-01-09 15:30:48'),
-(6, 69, 'Generate Product revenue report', 'productRevenue', 'Start', 0, '2019-01-09 15:30:48', '2019-01-09 15:30:48'),
-(7, 69, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 15:30:48', '2019-01-09 15:30:48'),
-(8, 1, 'Create Campaign', 'create', 'Create Start', 0, '2019-01-09 15:33:08', '2019-01-09 15:33:08'),
-(9, 70, 'Create Lead', 'Create', 'Start', 0, '2019-01-09 15:34:11', '2019-01-09 15:34:11'),
-(10, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 15:36:23', '2019-01-09 15:36:23'),
-(11, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 15:37:07', '2019-01-09 15:37:07'),
-(12, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 15:37:23', '2019-01-09 15:37:23'),
-(13, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 15:39:25', '2019-01-09 15:39:25'),
-(14, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 15:39:27', '2019-01-09 15:39:27'),
-(15, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 15:41:27', '2019-01-09 15:41:27'),
-(16, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 15:41:41', '2019-01-09 15:41:41'),
-(17, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 15:41:56', '2019-01-09 15:41:56'),
-(18, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 15:41:59', '2019-01-09 15:41:59'),
-(19, 69, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 15:44:44', '2019-01-09 15:44:44'),
-(20, 71, 'Edit In Progress Lead Start', 'edit', 'Start', 0, '2019-01-09 16:00:41', '2019-01-09 16:00:41'),
-(21, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 16:00:54', '2019-01-09 16:00:54'),
-(22, 71, 'Edit In Progress Lead Start', 'edit', 'Start', 0, '2019-01-09 16:00:57', '2019-01-09 16:00:57'),
-(23, 71, 'Edit In Progress Lead Start', 'edit', 'Start', 0, '2019-01-09 16:01:13', '2019-01-09 16:01:13'),
-(24, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 16:02:54', '2019-01-09 16:02:54'),
-(25, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 16:03:19', '2019-01-09 16:03:19'),
-(26, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 16:07:21', '2019-01-09 16:07:21'),
-(27, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 16:07:38', '2019-01-09 16:07:38'),
-(28, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 16:07:41', '2019-01-09 16:07:41'),
-(29, 69, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 16:08:21', '2019-01-09 16:08:21'),
-(30, 71, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 16:09:14', '2019-01-09 16:09:14'),
-(31, 71, 'Follow up New Lead Start', 'followUp', 'Start', 0, '2019-01-09 16:09:37', '2019-01-09 16:09:37'),
-(32, 69, 'Show Lead', 'show', 'Start', 0, '2019-01-09 16:09:55', '2019-01-09 16:09:55'),
-(33, 1, 'Show Lead', 'show', 'Start', 0, '2019-01-09 16:10:08', '2019-01-09 16:10:08'),
-(34, 69, 'Show Lead', 'show', 'Start', 0, '2019-01-09 16:10:28', '2019-01-09 16:10:28'),
-(35, 69, 'Show Lead', 'show', 'Start', 0, '2019-01-09 16:12:36', '2019-01-09 16:12:36'),
-(36, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:12:57', '2019-01-09 16:12:57'),
-(37, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:12:57', '2019-01-09 16:12:57'),
-(38, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:12:57', '2019-01-09 16:12:57'),
-(39, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:12:59', '2019-01-09 16:12:59'),
-(40, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:12:59', '2019-01-09 16:12:59'),
-(41, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:12:59', '2019-01-09 16:12:59'),
-(42, 69, 'Show Lead', 'show', 'Start', 0, '2019-01-09 16:13:12', '2019-01-09 16:13:12'),
-(43, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:13:31', '2019-01-09 16:13:31'),
-(44, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:13:31', '2019-01-09 16:13:31'),
-(45, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:13:31', '2019-01-09 16:13:31'),
-(46, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:13:45', '2019-01-09 16:13:45'),
-(47, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:13:45', '2019-01-09 16:13:45'),
-(48, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:13:45', '2019-01-09 16:13:45'),
-(49, 69, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:14:38', '2019-01-09 16:14:38'),
-(50, 69, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:14:38', '2019-01-09 16:14:38'),
-(51, 69, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:14:38', '2019-01-09 16:14:38'),
-(52, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:16:40', '2019-01-09 16:16:40'),
-(53, 1, 'Generate Product revenue report', 'productRevenue', 'Start', 0, '2019-01-09 16:16:40', '2019-01-09 16:16:40'),
-(54, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:16:50', '2019-01-09 16:16:50'),
-(55, 1, 'Generate Campaign revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:16:50', '2019-01-09 16:16:50'),
-(56, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:16:57', '2019-01-09 16:16:57'),
-(57, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:16:57', '2019-01-09 16:16:57'),
-(58, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:16:57', '2019-01-09 16:16:57'),
-(59, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:17:35', '2019-01-09 16:17:35'),
-(60, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:17:35', '2019-01-09 16:17:35'),
-(61, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:17:35', '2019-01-09 16:17:35'),
-(62, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:17:39', '2019-01-09 16:17:39'),
-(63, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:17:39', '2019-01-09 16:17:39'),
-(64, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:17:39', '2019-01-09 16:17:39'),
-(65, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:17:52', '2019-01-09 16:17:52'),
-(66, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:17:52', '2019-01-09 16:17:52'),
-(67, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:17:52', '2019-01-09 16:17:52'),
-(68, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:22:25', '2019-01-09 16:22:25'),
-(69, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:22:25', '2019-01-09 16:22:25'),
-(70, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:22:25', '2019-01-09 16:22:25'),
-(71, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:22:30', '2019-01-09 16:22:30'),
-(72, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:22:30', '2019-01-09 16:22:30'),
-(73, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:22:30', '2019-01-09 16:22:30'),
-(74, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:22:39', '2019-01-09 16:22:39'),
-(75, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:22:39', '2019-01-09 16:22:39'),
-(76, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:22:39', '2019-01-09 16:22:39'),
-(77, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:22:44', '2019-01-09 16:22:44'),
-(78, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:22:44', '2019-01-09 16:22:44'),
-(79, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:22:44', '2019-01-09 16:22:44'),
-(80, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:22:53', '2019-01-09 16:22:53'),
-(81, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:22:53', '2019-01-09 16:22:53'),
-(82, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:22:53', '2019-01-09 16:22:53'),
-(83, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:23:09', '2019-01-09 16:23:09'),
-(84, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:23:09', '2019-01-09 16:23:09'),
-(85, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:23:09', '2019-01-09 16:23:09'),
-(86, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:23:14', '2019-01-09 16:23:14'),
-(87, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:23:14', '2019-01-09 16:23:14'),
-(88, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:23:14', '2019-01-09 16:23:14'),
-(89, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:23:15', '2019-01-09 16:23:15'),
-(90, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:23:15', '2019-01-09 16:23:15'),
-(91, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:23:15', '2019-01-09 16:23:15'),
-(92, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:23:17', '2019-01-09 16:23:17'),
-(93, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:23:17', '2019-01-09 16:23:17'),
-(94, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:23:17', '2019-01-09 16:23:17'),
-(95, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:23:19', '2019-01-09 16:23:19'),
-(96, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:23:19', '2019-01-09 16:23:19'),
-(97, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:23:19', '2019-01-09 16:23:19'),
-(98, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:24:26', '2019-01-09 16:24:26'),
-(99, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:24:26', '2019-01-09 16:24:26'),
-(100, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:24:26', '2019-01-09 16:24:26'),
-(101, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:24:29', '2019-01-09 16:24:29'),
-(102, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:24:29', '2019-01-09 16:24:29'),
-(103, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:24:29', '2019-01-09 16:24:29'),
-(104, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:24:33', '2019-01-09 16:24:33'),
-(105, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:24:33', '2019-01-09 16:24:33'),
-(106, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:24:33', '2019-01-09 16:24:33'),
-(107, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:24:36', '2019-01-09 16:24:36'),
-(108, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:24:36', '2019-01-09 16:24:36'),
-(109, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:24:36', '2019-01-09 16:24:36'),
-(110, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:24:53', '2019-01-09 16:24:53'),
-(111, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:24:53', '2019-01-09 16:24:53'),
-(112, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:24:53', '2019-01-09 16:24:53'),
-(113, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:25:49', '2019-01-09 16:25:49'),
-(114, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:25:49', '2019-01-09 16:25:49'),
-(115, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:25:49', '2019-01-09 16:25:49'),
-(116, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:25:58', '2019-01-09 16:25:58'),
-(117, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:25:58', '2019-01-09 16:25:58'),
-(118, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:25:58', '2019-01-09 16:25:58'),
-(119, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:26:01', '2019-01-09 16:26:01'),
-(120, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:26:01', '2019-01-09 16:26:01'),
-(121, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:26:01', '2019-01-09 16:26:01'),
-(122, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:26:20', '2019-01-09 16:26:20'),
-(123, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:26:20', '2019-01-09 16:26:20'),
-(124, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:26:20', '2019-01-09 16:26:20'),
-(125, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:27:19', '2019-01-09 16:27:19'),
-(126, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:27:19', '2019-01-09 16:27:19'),
-(127, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:27:19', '2019-01-09 16:27:19'),
-(128, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:27:28', '2019-01-09 16:27:28'),
-(129, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:27:28', '2019-01-09 16:27:28'),
-(130, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:27:28', '2019-01-09 16:27:28'),
-(131, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:30:35', '2019-01-09 16:30:35'),
-(132, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:30:35', '2019-01-09 16:30:35'),
-(133, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:30:35', '2019-01-09 16:30:35'),
-(134, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:30:37', '2019-01-09 16:30:37'),
-(135, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:30:37', '2019-01-09 16:30:37'),
-(136, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:30:37', '2019-01-09 16:30:37'),
-(137, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:30:40', '2019-01-09 16:30:40'),
-(138, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:30:40', '2019-01-09 16:30:40'),
-(139, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:30:40', '2019-01-09 16:30:40'),
-(140, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:31:04', '2019-01-09 16:31:04'),
-(141, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:31:04', '2019-01-09 16:31:04'),
-(142, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:31:04', '2019-01-09 16:31:04'),
-(143, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:31:09', '2019-01-09 16:31:09'),
-(144, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:31:09', '2019-01-09 16:31:09'),
-(145, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:31:09', '2019-01-09 16:31:09'),
-(146, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:31:17', '2019-01-09 16:31:17'),
-(147, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:31:17', '2019-01-09 16:31:17'),
-(148, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:31:17', '2019-01-09 16:31:17'),
-(149, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:31:23', '2019-01-09 16:31:23'),
-(150, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:31:23', '2019-01-09 16:31:23'),
-(151, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:31:23', '2019-01-09 16:31:23'),
-(152, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:31:34', '2019-01-09 16:31:34'),
-(153, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:31:34', '2019-01-09 16:31:34'),
-(154, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:31:34', '2019-01-09 16:31:34'),
-(155, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:32:34', '2019-01-09 16:32:34'),
-(156, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:32:34', '2019-01-09 16:32:34'),
-(157, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:32:34', '2019-01-09 16:32:34'),
-(158, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:32:53', '2019-01-09 16:32:53'),
-(159, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:32:53', '2019-01-09 16:32:53'),
-(160, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:32:53', '2019-01-09 16:32:53'),
-(161, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:32:58', '2019-01-09 16:32:58'),
-(162, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:32:58', '2019-01-09 16:32:58'),
-(163, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:32:58', '2019-01-09 16:32:58'),
-(164, 1, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:35:11', '2019-01-09 16:35:11'),
-(165, 1, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:35:11', '2019-01-09 16:35:11'),
-(166, 1, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:35:11', '2019-01-09 16:35:11'),
-(167, 71, 'Generate report selector', 'generate', 'Start', 0, '2019-01-09 16:35:17', '2019-01-09 16:35:17'),
-(168, 71, 'Generate Employee revenue report', 'campaignRevenue', 'Start', 0, '2019-01-09 16:35:17', '2019-01-09 16:35:17'),
-(169, 71, 'Split start and end dates', 'splitDates', 'Start', 0, '2019-01-09 16:35:17', '2019-01-09 16:35:17'),
-(170, 1, 'Edit New Lead Start', 'edit', 'Start', 0, '2019-01-09 16:43:28', '2019-01-09 16:43:28'),
-(171, 1, 'Get branches', 'getBranches', 'Start', 0, '2019-01-09 16:50:03', '2019-01-09 16:50:03'),
-(172, 1, 'Create Product', 'Create', 'Start', 0, '2019-01-09 16:54:08', '2019-01-09 16:54:08');
+(1, 1, 'Create user', 'create', 'Start', 0, '2019-01-09 15:12:10', '2019-01-09 15:12:10');
 
 -- --------------------------------------------------------
 
@@ -722,7 +546,7 @@ CREATE TABLE `generalleads` (
 --
 
 INSERT INTO `generalleads` (`id`, `user_id`, `client_id`, `agent_id`, `marketer_id`, `name`, `phone`, `email`, `comment`, `conversionstatus_id`, `remarks`, `revenue`, `status_id`, `branch_id`, `campaign_id`, `product_id`, `created_at`, `updated_at`) VALUES
-(125, 70, 12, 71, NULL, NULL, '0779018898', NULL, 'new client', 1, NULL, 1000000, 0, 1, 3, 1, '2019-01-09 15:34:11', '2019-01-09 16:09:37');
+(125, 70, 12, 71, NULL, NULL, '0777777777', NULL, 'new client', 1, NULL, 1000000, 0, 1, 3, 1, '2019-01-09 15:34:11', '2019-01-09 16:09:37');
 
 -- --------------------------------------------------------
 
@@ -745,8 +569,8 @@ CREATE TABLE `incommingleads` (
 --
 
 INSERT INTO `incommingleads` (`id`, `telnumber`, `agent_id`, `active`, `seen`, `created_at`, `updated_at`) VALUES
-(6, '0779018898', 70, 1, 1, '2019-01-09 15:33:27', '2019-01-09 15:33:31'),
-(7, '0779018898', 70, 1, 0, '2019-01-09 17:04:00', '2019-01-09 17:04:00');
+(6, '0777777777', 70, 1, 1, '2019-01-09 15:33:27', '2019-01-09 15:33:31'),
+(7, '0777777777', 70, 1, 0, '2019-01-09 17:04:00', '2019-01-09 17:04:00');
 
 -- --------------------------------------------------------
 
@@ -913,10 +737,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `branch_id`, `name`, `email`, `contact`, `empid`, `password`, `image`, `active`, `confirmation_code`, `confirmed`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 1, 'Nilaksha Perera', 'nilaksha@enfection.com', '0779018898', 'emp', '$2y$10$aHN/GPwnunQpq6RFxnpuY.bj/zXu54sYG6c3D3SLVmhNFbz9m8QYC', '', 1, '2e538283-3298-4d5b-aaf9-2986c7799b4a', 1, 'Xf5I2hHFpQ6cHxdwPAoiBANr3i0oSfuroAI7BlxS3XgyKUVyAoKO5aYrYSL5', '2018-01-10 03:44:35', '2019-01-08 11:15:15', NULL),
-(69, 3, 1, 'Prasanna', 'prasanna@enfection.com', '0777777777', 'enf001', '$2y$10$TdKGIIY6v2nMcGfyJJloLe8jicnpQYOW7So/O0oPpJPXA0SXBIwZa', NULL, 1, NULL, 1, '8zG6LETVTgKHEuL2sy2YF6zdjwJiN81dhTHKQVOTfEVlgUrqyviM9MjeXLQH', '2019-01-09 15:12:10', '2019-01-09 15:12:10', NULL),
-(70, 6, 1, 'Rashan', 'rashan@enfection.com', '0777777777', 'enf002', '$2y$10$DT3NgG4DA.u2wY2M5iaGgevOwL.RUvINJY/5/zNy.15ljN5Jhii0K', NULL, 1, NULL, 1, 'Xlw7hIiPHsCPjEHGR8O4Hm8hzCWwkCHUuRmNq4Ue2ZRCVlMIQgvZWJ0zRh4B', '2019-01-09 15:13:27', '2019-01-09 15:13:27', NULL),
-(71, 4, 1, 'Pamoda', 'pamoda@enfection.com', '077777777', 'enf003', '$2y$10$vsvjwse/uFByVeZAFAqMXehuoPGtPEuEIKrIAsnvYxRYb6cOAytgC', NULL, 1, NULL, 1, NULL, '2019-01-09 15:15:56', '2019-01-09 15:15:56', NULL);
+(1, 1, 1, 'Nilaksha Perera', 'hello@nilaksha.com', '0777777777', 'emp', '$2y$10$aHN/GPwnunQpq6RFxnpuY.bj/zXu54sYG6c3D3SLVmhNFbz9m8QYC', '', 1, '2e538283-3298-4d5b-aaf9-2986c7799b4a', 1, 'Xf5I2hHFpQ6cHxdwPAoiBANr3i0oSfuroAI7BlxS3XgyKUVyAoKO5aYrYSL5', '2018-01-10 03:44:35', '2019-01-08 11:15:15', NULL);
 
 --
 -- Indexes for dumped tables
